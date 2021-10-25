@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700");
+
+html,
+body {
+  background: #111;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 600px;
+}
+
+body > canvas {
+  left: 50%;
+  margin-left: -300px;
+  margin-top: -300px;
+  position: absolute;
+  top: 50%;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.3);
+  font-family: Roboto, sans-serif;
+  font-size: 0.8rem;
+  left: 8px;
+  line-height: 1.5;
+  position: absolute;
+  top: 8px;
+  width: 50%;
+  z-index: 1;
+}
+a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Translucent pane */
+:root {
+  --tp-base-background-color: hsla(230, 5%, 10%, 0.7);
+}
+.tp-rotv,
+.tp-clpv {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
