@@ -13,10 +13,6 @@ const INPUTS = {
   subFreq: 300,
   subLen: 0.2
 };
-// Output parameters
-const OUTPUTS = {
-  json: ""
-};
 // Canvas size
 const SIZE = 600;
 
@@ -186,9 +182,6 @@ let fpsGraph;
     lineCount: 2,
     view: "fpsgraph"
   });
-  folder.addMonitor(OUTPUTS, "json", {
-    multiline: true
-  });
   folder
     .addButton({
       title: "Capture"
@@ -201,15 +194,6 @@ let fpsGraph;
     title: "misc"
   })
 );
-
-// Update output JSON on change
-function updatePreset() {
-  OUTPUTS.json = JSON.stringify(pane.exportPreset(), null, 2);
-}
-pane.on("change", () => {
-  updatePreset();
-});
-updatePreset();
 
 // Sketch
 let frameCount = 0;
